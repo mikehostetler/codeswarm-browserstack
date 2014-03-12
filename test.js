@@ -61,7 +61,6 @@ function test(build, stage, config, context) {
       withCapabilities(capabilities).
       build();
 
-
     console.log('[browserstack] TESTING URL %j on %j', url, browser);
     worker.get(url).then(scheduleWorkerPoll, callback);
 
@@ -72,18 +71,16 @@ function test(build, stage, config, context) {
     }
 
     function pollWorker() {
-      console.log('polling worker...');
-      worker.eval('window.__codeswarm && window.__codeswarm.ended').then(gotPollResults, callback);
+      worker.executeScript('return window.__codeswarm && window.__codeswarm.ended').then(gotPollResults, callback);
     }
 
     function gotPollResults(ended) {
-      console.log('poll results: %j', ended);
       if (ended) testEnded();
       else scheduleWorkerPoll();
     }
 
     function testEnded() {
-      worker.eval('window.__codeswarm && window.__codeswarm.results').then(gotResults, callback);
+      worker.executeScript('return window.__codeswarm && window.__codeswarm.results').then(gotResults, callback);
     }
 
     function gotResults(results) {
