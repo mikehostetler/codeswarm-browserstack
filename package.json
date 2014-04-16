@@ -1,7 +1,7 @@
 {
   "name": "codeswarm-browserstack",
   "version": "0.0.1",
-  "description": "Plugin for doing browser tests in Browserstack",
+  "description": "CodeSwarm Plugin for doing browser tests in Browserstack",
   "private": true,
   "main": "index.js",
   "repository": {
@@ -9,7 +9,7 @@
     "url": "git://github.com/CodeSwarm/codeswarm-browserstack.git"
   },
   "author": "CodeSwarm",
-  "license": "MIT",
+  "license": "Apache 2",
   "bugs": {
     "url": "https://github.com/CodeSwarm/codeswarm-browserstack/issues"
   },
@@ -18,5 +18,14 @@
     "async": "~0.2.10",
     "node-uuid": "~1.4.1",
     "browserstack-webdriver": "~2.39.2"
-  }
+  },
+  "devDependencies": {
+		"mocha": "^1.18.2"
+	},
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha -u tdd"
+  },
+  "keywords": [
+    "codeswarm"
+  ]
 }
