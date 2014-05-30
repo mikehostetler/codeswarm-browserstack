@@ -36,7 +36,7 @@ $ brew install php54
 
 This project has been released under the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html), the text of which is included below. This license applies ONLY to the source of this repository and does not extend to any other CodeSwarm distribution or variant, or any other 3rd party libraries used in a repository. 
 
-> Copyright © 2014 CodeSwarm, Inc.
+> Copyright © 2014 appendTo, Inc.
 
 > Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
